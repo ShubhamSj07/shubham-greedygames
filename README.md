@@ -3,7 +3,7 @@
 </p>
 
 <h4 align="center">
-  <a href="https://shubham-volopay.vercel.app/" target="_blank" rel="noreferrer">Deployed Project 🚀</a>
+  <a href="https://shubham-greedygames.vercel.app/analytics" target="_blank" rel="noreferrer">Deployed Project 🚀</a>
 </h4>
 
 ### How to Run Locally
