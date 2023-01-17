@@ -3,7 +3,7 @@ export const FilterBySearch = ({
   query,
   setQuery,
   setActiveAppId,
-  setSetShowFiltersBy,
+  setShowFiltersBy,
 }) => {
   const suggestionsList =
     query === ""
@@ -13,7 +13,7 @@ export const FilterBySearch = ({
         );
 
   const clearFilters = () => {
-    // setSetShowFiltersBy(false);
+    // setShowFiltersBy(false);
     setActiveAppId("");
     setQuery("");
   };
@@ -22,7 +22,7 @@ export const FilterBySearch = ({
     <div
       className="overlay"
       onClick={() =>
-        setSetShowFiltersBy(prev => ({
+        setShowFiltersBy(prev => ({
           ...prev,
           search: !prev.search,
         }))
@@ -60,7 +60,7 @@ export const FilterBySearch = ({
                   ? apps.filter(app => app["app_name"] === query)[0]["app_id"]
                   : ""
               );
-              setSetShowFiltersBy(prev => ({
+              setShowFiltersBy(prev => ({
                 ...prev,
                 search: !prev.search,
               }));

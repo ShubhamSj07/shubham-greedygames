@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const FilterByRange = ({ setSetShowFiltersBy, setRange, min, max }) => {
+export const FilterByRange = ({ setShowFiltersBy, setRange, min, max }) => {
   const [values] = useState({
     start: min,
     end: max,
@@ -15,7 +15,7 @@ export const FilterByRange = ({ setSetShowFiltersBy, setRange, min, max }) => {
     <div
       className="overlay"
       onClick={() => {
-        setSetShowFiltersBy(prev => ({
+        setShowFiltersBy(prev => ({
           ...prev,
           range: false,
         }));
@@ -37,7 +37,7 @@ export const FilterByRange = ({ setSetShowFiltersBy, setRange, min, max }) => {
           <button
             className="cancelBtn"
             onClick={() => {
-              setSetShowFiltersBy(prev => ({
+              setShowFiltersBy(prev => ({
                 ...prev,
                 range: false,
               }));
@@ -49,7 +49,7 @@ export const FilterByRange = ({ setSetShowFiltersBy, setRange, min, max }) => {
           <button
             className="applyBtn"
             onClick={() => {
-              setSetShowFiltersBy(prev => ({
+              setShowFiltersBy(prev => ({
                 ...prev,
                 range: false,
               }));

@@ -20,7 +20,7 @@ const AnalyticsTable = () => {
   const [type, setType] = useState({
     label: "",
   });
-  const [showFiltersBy, setSetShowFiltersBy] = useState({
+  const [showFiltersBy, setShowFiltersBy] = useState({
     search: false,
     range: false,
   });
@@ -47,7 +47,7 @@ const AnalyticsTable = () => {
 
   const handleFilterBy = config => {
     if (filteredData.length > 0) {
-      setSetShowFiltersBy(prev => ({
+      setShowFiltersBy(prev => ({
         ...showFiltersBy,
         [config]: !prev[config],
       }));
@@ -131,7 +131,7 @@ const AnalyticsTable = () => {
           query={query}
           setQuery={setQuery}
           setActiveAppId={setActiveAppId}
-          setSetShowFiltersBy={setSetShowFiltersBy}
+          setShowFiltersBy={setShowFiltersBy}
         />
       )}
       {showFiltersBy?.range && (
@@ -145,7 +145,7 @@ const AnalyticsTable = () => {
             Math.max(...fetchedData.map(item => item[type.label]))
           )}
           activeId={type.label}
-          setSetShowFiltersBy={setSetShowFiltersBy}
+          setShowFiltersBy={setShowFiltersBy}
           setRange={setRange}
         />
       )}
