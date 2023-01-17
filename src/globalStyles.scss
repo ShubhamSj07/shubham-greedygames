@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+input {
+  border: none !important;
+  outline-color: #eaeaea !important;
+  padding: 0.85rem 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.icon {
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 15px;
+  color: #136fed;
+}
+
+@mixin actionBtnStyles {
+  font-size: 0.85rem;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #eaeaea;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  @include actionBtnStyles;
+  color: #136fed;
+}
+
+.applyBtn {
+  @include actionBtnStyles;
+  border: 1px solid #136fed;
+  background-color: #136fed;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.63);
+
+  &__filters {
+    position: absolute;
+    top: 235px;
+    left: 235px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    background: #fff;
+
+    &-suggestions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1rem 0;
+      cursor: pointer;
+
+      p {
+        font-size: 0.85rem;
+      }
+    }
+
+    &-footer {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+  }
+}

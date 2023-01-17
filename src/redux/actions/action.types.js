@@ -1,0 +1,7 @@
+export const FETCH_API_DATA = "FETCH_API_DATA";
+export const FETCH_APPS_LIST = "FETCH_APPS_LIST";
+
+export const SELECTED_COLUMN = "SELECTED_COLUMN";
+export const TOGGLE_SETTINGS = "TOGGLE_SETTINGS";
+
+export const FETCH_ERROR = "FETCH_ERROR";

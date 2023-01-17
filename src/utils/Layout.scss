@@ -15,4 +15,15 @@
   &__content {
     margin: 2rem 5rem;
   }
+
+  @media screen and (max-width: 1000px) {
+    &__aside {
+      display: none;
+    }
+
+    &__content {
+      margin: 0;
+      padding: 1.5rem;
+    }
+  }
 }

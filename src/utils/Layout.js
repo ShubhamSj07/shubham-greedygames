@@ -1,11 +1,10 @@
-import React from "react";
-import styles from "./Layout.module.scss";
+import "./Layout.scss";
 
 export const Layout = ({ children }) => {
   return (
-    <div className={styles["layout"]}>
-      <aside className={styles["layout__aside"]}></aside>
-      <div className={styles["layout__content"]}>{children}</div>
+    <div className="layout">
+      <aside className="layout__aside"></aside>
+      <div className="layout__content">{children}</div>
     </div>
   );
 };
