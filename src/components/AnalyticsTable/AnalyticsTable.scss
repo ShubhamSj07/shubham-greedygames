@@ -1,0 +1,81 @@
+.analyticsTable__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+
+  table {
+    width: 100%;
+
+    tr {
+      text-align: center;
+    }
+
+    td {
+      color: #1d1a1a;
+      padding: 0.5rem 1rem;
+      text-align: right;
+      border-top: 1px solid #ddd;
+    }
+
+    .totalValues {
+      color: #212121;
+      font-size: 1.5rem;
+      text-align: right;
+    }
+
+    .headerCellName {
+      padding: 1rem 0;
+      color: #707070;
+      text-align: revert;
+      width: 150px;
+      max-width: 150px;
+      text-transform: capitalize;
+
+      &:last-child {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__hasError {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+    background: #f9f9f9;
+
+    &-suggestionImg {
+      img {
+        max-width: 300px;
+      }
+    }
+
+    &-suggestionText {
+      h3 {
+        color: #1d1a1a;
+      }
+
+      p {
+        color: #b9b9b9;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    & {
+      width: 100%;
+      overflow-y: scroll;
+
+      &__hasError {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}
