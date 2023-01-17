@@ -1,0 +1,52 @@
+.settings__container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: #eaeaea;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  &__dragDropZone {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    &-btns {
+      border: 1px solid #eaeaea;
+      border-left: 4px solid #eaeaea;
+      background: none;
+      border-radius: 4px;
+      text-align: left;
+      padding: 0.5em 1rem;
+      width: 150px;
+      text-transform: capitalize;
+    }
+
+    .selected {
+      border-left: 4px solid #136fed;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    & {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      &__dragDropZone {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+      }
+    }
+  }
+}
